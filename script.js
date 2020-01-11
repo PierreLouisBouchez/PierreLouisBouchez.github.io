@@ -21,13 +21,13 @@ function change(){
     setTimeout(chrono,1000);
 }
 function chrono() {
-    document.getElementById("chrono").innerHTML=time--;
-    if(time>=0){
+    if(time>=0 && !end){
+        document.getElementById("chrono").innerHTML=time--;
         setTimeout(chrono,1000);
     }else{
         time=120;
         end=true;
-        console.log(end);
+        document.getElementById("chrono").innerHTML="Dommage !";
     verif();
     }
     
@@ -50,6 +50,8 @@ function endgame() {
             return 0;
         }
     }
+    end=true;
+    document.getElementById("chrono").innerHTML="Bien joué !!"
     return 1;
 }
 function verif() {
