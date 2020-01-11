@@ -1,6 +1,6 @@
 var tab=[1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 var tabbool;
-var time=120;
+var time=100;
 var end=false;
 
 document.addEventListener("DOMContentLoaded",main);
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded",main);
 function change(){
     document.getElementById("game").hidden=false;
     document.getElementById("start").hidden=true;
+    time=100;
     tabbool=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     tab.sort(
         function() {
@@ -16,19 +17,24 @@ function change(){
     });
     for (let i = 0; i < tab.length; i++) {
         document.getElementById(i).src="img/mem_back.jpg";
+        document.getElementById(i).style="border-color:white;";
         document.getElementById(i).addEventListener("click",click(i));
     }
     setTimeout(chrono,1000);
 }
 function chrono() {
-    if(time>=0 && !end){
-        document.getElementById("chrono").innerHTML=time--;
-        setTimeout(chrono,1000);
+    if(!end){
+        if(time>=0){
+            document.getElementById("chrono").innerHTML=time--;
+            setTimeout(chrono,1000);
+        }else{
+            
+            end=true;
+            document.getElementById("chrono").innerHTML="Dommage !";
+        verif();
+        }
     }else{
-        time=120;
-        end=true;
-        document.getElementById("chrono").innerHTML="Dommage !";
-    verif();
+        end=false;
     }
     
     
