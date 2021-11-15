@@ -1,0 +1,19 @@
+
+img{
+    width: 23%;
+    height:23%;
+    margin:1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+}
+img:hover{
+    border-color: brown;
+}
+body{
+    margin: 0;
+    background-color: burlywood;
+    height: 100vh;
+    width: 100vw;
+    
+}
