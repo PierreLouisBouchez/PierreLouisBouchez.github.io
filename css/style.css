@@ -149,3 +149,17 @@ h1{
   background-image: url("../image/gif.gif");
   background-size: 150%;
 }
+
+
+.Enlighten{
+  height:35vh;
+  width: 100%;
+  background-image: url("../image/enlighten.png");
+  background-size: 100%;
+}
+.Enlighten:hover {
+  height:35vh;
+  width: 100%;
+  background-image: url("../image/enlighten.png");
+  background-size: 100%;
+}
