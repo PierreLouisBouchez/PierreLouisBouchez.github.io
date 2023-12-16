@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /image/
+Disallow: /memorygame/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml

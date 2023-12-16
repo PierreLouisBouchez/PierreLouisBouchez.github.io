@@ -1,33 +1,40 @@
 <!doctype html>
 <html lang='fr'>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
+	<meta name="description"
+		content="Portfolio de Pierre-Louis Bouchez, développeur informatique. Découvrez mes compétences, projets et illustrations.">
+	<meta name="keywords" content="Portfolio, Pierre-Louis Bouchez, Informatique, Compétences, Projets, Illustrations">
 	<meta name="author" content="Pierre-Louis Bouchez">
 
 	<title>Bienvenue sur mon Portfolio</title>
 	<link rel="shortcut icon" href="image/favicon.ico">
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-	<script src="carousel/flickity-docs.min.js"></script>
-	<link rel="stylesheet" href="carousel/flickity-docs.css">
-
-	<script src="js/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-	crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="carousel/flickity-docs.css">
+	<script src="carousel/flickity-docs.min.js"></script>
+	<script src="js/jquery.min.js"></script>	
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://threejs.org/build/three.min.js"></script>
+    <!-- Ajouter les contrôles OrbitControls pour faciliter la navigation -->
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    
+
 </head>
+
 <body>
 
 	<div>
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top Nav" style="background-color: black">
-			<div class="container" >
+			<div class="container">
 				<a class="navbar-brand js-scroll-trigger" href="#Accueil">Pierre-Louis Bouchez</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-				 aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+					aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -64,27 +71,27 @@
 	<div class="container-fluid" id="Accueil">
 		<img src="image/back1.png" alt="" style="width:100% ;text-align: center">
 	</div>
+	
+	<div id="scene-container"></div>
+	
 	<div id="Profil">
 		<div class="container  ">
 			<div class="row" style="padding-top: 10vh;">
-				<div class="col-6 col-xs-12">
+				<div class="col-3 ">
 
 					<img src="image/user.png" alt="" style="width:80% ;text-align: center;border-radius: 45%">
 				</div>
-				<div class="col-6 col-xs-12">
-
-
-					<p style="color:white; font-size: 3vmin;">Je suis Pierre-Louis Bouchez, j'ai 23 ans et je suis actuellement en recherche d'emploi . </p>
+				<div class="col-9">
+					<p style="color:white; font-size: 3vmin;">Je suis Pierre-Louis Bouchez, j'ai 24 ans et je suis développeur informatique. </p>
 
 				</div>
 
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid py-5" id="Formation">
+	<div class="container-fluid py-5" id="Formation"></div>
 
-	</div>
-	<div class="container-fluid my-5" >
+	<div class="container-fluid my-5">
 		<div class="row formation">
 			<div class="col-lg-12">
 				<h2>Formation</h2>
@@ -92,15 +99,7 @@
 			<hr width="75%" color="white" size="3">
 		</div>
 		<div class="row formation pb-4">
-			<div class="col-lg-3 col-12" style="max-height:100% ">
-				<h2>2017</h2>
-				<h3>BAC Scientifique</h3>
-				<p>Sciences de l'ingénieur</p>
-				<p> La Malassise Longuenesse </p>
-
-				<img src="image/mala.png" alt="">
-			</div>
-			<div class="col-lg-3 col-12" style="max-height:100% ">
+			<div class="col-lg-4 col-12" style="max-height:100% ">
 				<h2>2017-2018</h2>
 
 				<h3>DUT Informatique</h3>
@@ -110,7 +109,7 @@
 
 				<img src="image/iut.png" alt="" style="width:30%">
 			</div>
-			<div class="col-lg-3 col-12" style="max-height:100% ">
+			<div class="col-lg-4 col-12" style="max-height:100% ">
 				<h2>2018-2019</h2>
 
 				<h3>Licence 3 Informatique</h3>
@@ -118,8 +117,8 @@
 				<h5>Université artois</h5>
 				<img src="image/artois.png" alt="" style="width:50%">
 			</div>
-			<div class="col-lg-3 col-12" style="max-height:100% ">
-				<h2>2019-2021</h2>
+			<div class="col-lg-4 col-12" style="max-height:100% ">
+				<h2>2019-2022</h2>
 
 				<h3>Master Informatique</h3>
 				<h5>Ingénierie logiciel pour les jeux vidéo</h5>
@@ -131,10 +130,11 @@
 
 		</div>
 	</div>
-		
+
 	<div class="py-3" id="Competences"></div>
 
-	<div class="container px-5 pb-4 mt-5" style="text-align: center;background-color:rgba(240, 255, 255, 0.89);border-radius: 2rem">
+	<div class="container px-5 pb-4 mt-5"
+		style="text-align: center;background-color:rgba(240, 255, 255, 0.89);border-radius: 2rem">
 		<div class="row py-3">
 			<h2>Compétences</h2>
 		</div>
@@ -164,8 +164,8 @@
 
 		</div>
 	</div>
-		
-	<div class="container-fluid  py-5" >	
+
+	<div class="container-fluid  py-5">
 		<div class="qualite barqualite">
 			<div class="container-fluid text-white">
 				<div class="row ">
@@ -193,109 +193,117 @@
 	</div>
 
 
-	<div id="Projets" class="py-4">	
+	<div id="Projets" class="py-4">
 	</div>
 
-		<div class="container " style="color: whitesmoke;">
-			<div class="row py-2">
-				<h2>Projets :</h2>
+	<div class="container " style="color: whitesmoke;">
+		<div class="row py-2">
+			<h2>Projets :</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6 col-12 ">
+				<video controls class="col-12">
+					<source src="image/bombermandemo.mp4" type="video/mp4">
+				</video>
 			</div>
-
-			<div class="row">			
-				<div class="col-lg-6 col-12 ">
-					<video controls class="col-12">
-						<source src="image/bombermandemo.mp4" type="video/mp4">
-					</video>
-				</div>	
-				<div class="col-lg-6 col-12">
-					<h2 class="col-12">Projet Bomberman</h2>
-					<div>Projet Unreal Engine 4 en binôme, réalisé en C++ et en blueprints dans le cadre de notre master ILJ, la majorité des modèles 3ds et des textures sont réalisés par moi-même.</div></br>
-					<a href="https://github.com/PierreLouisBouchez/Bomberman">Lien Github</a>
-				</div>
+			<div class="col-lg-6 col-12">
+				<h2 class="col-12">Projet Bomberman</h2>
+				<div>Projet Unreal Engine 4 en binôme, réalisé en C++ et en blueprints dans le cadre de notre master
+					ILJ, la majorité des modèles 3ds et des textures sont réalisés par moi-même.</div></br>
+				<a href="https://github.com/PierreLouisBouchez/Bomberman">Lien Github</a>
 			</div>
-			<hr class="my-3" style="background-color:white; width:80%;text-align:center"> 
+		</div>
+		<hr class="my-3" style="background-color:white; width:80%;text-align:center">
 
 
 
-			<div class="row">			
-				<div class="col-lg-6 col-12 ">
-					<img class='col-12' src="image/enlighten.png" alt="enlighten" />
-				</div>	
-				<div class="col-lg-6 col-12">
-					<h2 class="col-12">Projet Unity</h2>
-					<div>Projet Unity réalisé en duo, le but de ce projet était de composer une scéne sur Unity en optimisant la lumière et en ajoutant une physique aux objets. </div></br>
-					<a href="https://github.com/PierreLouisBouchez/Enlighten">Lien Github</a>
-				</div>
+		<div class="row">
+			<div class="col-lg-6 col-12 ">
+				<img class='col-12' src="image/enlighten.png" alt="enlighten" />
 			</div>
-			<hr class="my-3" style="background-color:white; width:80%;text-align:center"> 
-
-
-			<div class="row">			
-				<div class="col-lg-6 col-12 ">
-					<img class='col-12' src="image/Tetris.PNG" alt="Tetris" />
-				</div>	
-				<div class="col-lg-6 col-12">
-					<h2 class="col-12">Tetris 1942</h2>
-					<div>Projet réalisé en duo, création d'une variante du jeu Tetris en C++ (SFML) </div></br>
-					<a href="https://github.com/PierreLouisBouchez/Tetris-1942">Lien Github</a>
-				</div>
+			<div class="col-lg-6 col-12">
+				<h2 class="col-12">Projet Unity</h2>
+				<div>Projet Unity réalisé en duo, le but de ce projet était de composer une scéne sur Unity en
+					optimisant la lumière et en ajoutant une physique aux objets. </div></br>
+				<a href="https://github.com/PierreLouisBouchez/Enlighten">Lien Github</a>
 			</div>
-			<hr class="my-3" style="background-color:white; width:80%;text-align:center"> 
+		</div>
+		<hr class="my-3" style="background-color:white; width:80%;text-align:center">
 
-			<div class="row">		
-				<div class="col-lg-6 col-12 ">
-					<img class='col-12' src="image/labyrinthe.png" alt="labyrinthe" />
-				</div>
-				<div class="col-lg-6 col-12">
-					<h2 class="col-12">Labyrinthe</h2>
-					<div>Le labyrinthe est un projet de groupe dont la tâche principale était de réaliser le jeu Labyrinthe(Ravensburger), le projet est codé en Java, et utilise la librairie JavaFX.</div></br>
-					<a href="https://github.com/AnthonyPereira/labyrinthe">Lien Github</a>
-				</div>
+
+		<div class="row">
+			<div class="col-lg-6 col-12 ">
+				<img class='col-12' src="image/Tetris.PNG" alt="Tetris" />
 			</div>
-			<hr class="my-3" style="background-color:white; width:80%;text-align:center"> 
-			
-			<div class="row">					
-				<div class="col-lg-6 col-12 ">	
-					<img class='col-12' src="image/SIAM.png" alt="SIAM" />
-				</div>	
-				<div class="col-lg-6 col-12">
-					<h2 class="col-12">Siam</h2>
-					<div>Le projet Siam est un projet web, l'objectif était de créer une application web permettant de jouer à une ou plusieurs parties du jeu Siam en Multijoueur.(PHP)</div></br>
-
-					<a href="https://github.com/PierreLouisBouchez/Siam">Lien Github</a>
-				</div>
+			<div class="col-lg-6 col-12">
+				<h2 class="col-12">Tetris 1942</h2>
+				<div>Projet réalisé en duo, création d'une variante du jeu Tetris en C++ (SFML) </div></br>
+				<a href="https://github.com/PierreLouisBouchez/Tetris-1942">Lien Github</a>
 			</div>
-			<hr class="my-3" style="background-color:white; width:80%;text-align:center"> 
+		</div>
+		<hr class="my-3" style="background-color:white; width:80%;text-align:center">
 
-			<div class="row">				
-				<div class="col-lg-6 col-12 ">
-					<div class="Flappy"> </div>
-				</div>
-				<div class="col-lg-6 col-12">
-					<h2 class="col-12">Flappy 2048</h2>
-					<div>Le projet Flappy2048 est une fusion du jeu 2048 et du jeu Flappy bird. Projet réalisé en groupe grâce à Python et la bibliothèque PyQt</div></br>
-
-					<a href="https://github.com/PierreLouisBouchez/Flappy-2048">Lien Github</a>
-				</div>
+		<div class="row">
+			<div class="col-lg-6 col-12 ">
+				<img class='col-12' src="image/labyrinthe.png" alt="labyrinthe" />
 			</div>
-		</div>	
-
-		<div class="container " style="color: whitesmoke;">
-			<div class="row py-2">
-				<h2>Projets personnels :</h2>
+			<div class="col-lg-6 col-12">
+				<h2 class="col-12">Labyrinthe</h2>
+				<div>Le labyrinthe est un projet de groupe dont la tâche principale était de réaliser le jeu
+					Labyrinthe(Ravensburger), le projet est codé en Java, et utilise la librairie JavaFX.</div></br>
+				<a href="https://github.com/AnthonyPereira/labyrinthe">Lien Github</a>
 			</div>
+		</div>
+		<hr class="my-3" style="background-color:white; width:80%;text-align:center">
 
-			<div class="row">			
-				<div class="col-lg-6 col-12 ">
-					<img class='col-12' src="image/bookmaker1.png" alt="bookmaker" />
-					<img class='col-12' src="image/bookmaker2.png" alt="bookmaker" />
-					<img class='col-12' src="image/bookmaker3.png" alt="bookmaker" />
+		<div class="row">
+			<div class="col-lg-6 col-12 ">
+				<img class='col-12' src="image/SIAM.png" alt="SIAM" />
+			</div>
+			<div class="col-lg-6 col-12">
+				<h2 class="col-12">Siam</h2>
+				<div>Le projet Siam est un projet web, l'objectif était de créer une application web permettant de jouer
+					à une ou plusieurs parties du jeu Siam en Multijoueur.(PHP)</div></br>
 
-				</div>	
-				<div class="col-lg-6 col-12">
-					<h2 class="col-12">The bookmaker</h2>
-					<div>Projet réalisé seul en cours de développement. Ce projet est un jeu en 2D(pixel art) sur le thème des années 20 en Angleterre(Inspiré de la série Peaky blinders). Le moteur de jeu utilisé est Godot Engine, mais j'ai comme projet de le passer sur Unity ou Unreal Engine.</br> Toutes les textures et animations sont réalisées par moi-même.</div></br>
-					<div >Lien Github bientôt disponible</a>
+				<a href="https://github.com/PierreLouisBouchez/Siam">Lien Github</a>
+			</div>
+		</div>
+		<hr class="my-3" style="background-color:white; width:80%;text-align:center">
+
+		<div class="row">
+			<div class="col-lg-6 col-12 ">
+				<div class="Flappy"> </div>
+			</div>
+			<div class="col-lg-6 col-12">
+				<h2 class="col-12">Flappy 2048</h2>
+				<div>Le projet Flappy2048 est une fusion du jeu 2048 et du jeu Flappy bird. Projet réalisé en groupe
+					grâce à Python et la bibliothèque PyQt</div></br>
+
+				<a href="https://github.com/PierreLouisBouchez/Flappy-2048">Lien Github</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container " style="color: whitesmoke;">
+		<div class="row py-2">
+			<h2>Projets personnels :</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6 col-12 ">
+				<img class='col-12' src="image/bookmaker1.png" alt="bookmaker" />
+				<img class='col-12' src="image/bookmaker2.png" alt="bookmaker" />
+				<img class='col-12' src="image/bookmaker3.png" alt="bookmaker" />
+
+			</div>
+			<div class="col-lg-6 col-12">
+				<h2 class="col-12">The bookmaker</h2>
+				<div>Projet réalisé seul en cours de développement. Ce projet est un jeu en 2D(pixel art) sur le thème
+					des années 20 en Angleterre(Inspiré de la série Peaky blinders). Le moteur de jeu utilisé est Godot
+					Engine, mais j'ai comme projet de le passer sur Unity ou Unreal Engine.</br> Toutes les textures et
+					animations sont réalisées par moi-même.</div></br>
+				<div>Lien Github bientôt disponible</a>
 
 				</div>
 			</div>
@@ -306,33 +314,33 @@
 				<h2>Projets modélisations :</h2>
 			</div>
 
-			<div class="row">			
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/25.png"  />		
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/24.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/23.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/22.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/21.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/20.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/19.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/18.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/17.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/16.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/15.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/14.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/13.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/12.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/11.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/10.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/9.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/8.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/7.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/6.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/5.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/4.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/3.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/2.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/modelisation/1.png"  />
-				
+			<div class="row">
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/25.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/24.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/23.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/22.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/21.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/20.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/19.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/18.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/17.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/16.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/15.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/14.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/13.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/12.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/11.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/10.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/9.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/8.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/7.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/6.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/5.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/4.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/3.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/2.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/modelisation/1.png" />
+
 
 			</div>
 
@@ -340,63 +348,67 @@
 				<h2>Projets illustrations (Ordre chronologique) :</h2>
 			</div>
 
-			<div class="row">			
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/71.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/70.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/68.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/67.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/66.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/65.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/64.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/63.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/62.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/61.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/60.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/59.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/58.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/57.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/56.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/55.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/52.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/51.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/49.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/48.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/47.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/46.png"  />				
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/45.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/44.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/43.png"  />	
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/42.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/41.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/40.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/39.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/38.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/35.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/32.jpg"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/31.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/30.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/29.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/28.jpg"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/27.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/26.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/25.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/24.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/23.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/22.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/21.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/20.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/19.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/18.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/17.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/16.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/15.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/14.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/9.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/8.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/6.png"  />
-				<img class='col-4' style="object-fit: contain;" src="image/dessin/4.png"  />
+			<div class="row">
+
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/71.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/70.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/68.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/67.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/66.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/65.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/64.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/63.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/62.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/61.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/60.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/59.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/58.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/57.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/56.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/55.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/52.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/51.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/49.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/48.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/47.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/46.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/45.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/44.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/43.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/42.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/41.png" />
+				<!--
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/40.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/39.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/38.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/35.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/32.jpg" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/31.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/30.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/29.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/28.jpg" />
+				
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/27.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/26.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/25.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/24.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/23.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/22.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/21.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/20.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/19.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/18.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/17.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/16.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/15.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/14.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/9.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/8.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/6.png" />
+				<img class='col-4' style="object-fit: contain;" src="image/dessin/4.png" />
+				  -->
 			</div>
-			
+
 		</div>
 
 
@@ -411,13 +423,15 @@
 				</div>
 
 				<div class="col-md-2 col-sm-2">
-					<a class="fab fa-linkedin fa-3x" style="color:white" href="https://www.linkedin.com/in/pierre-louis-bouchez/"></a>
+					<a class="fab fa-linkedin fa-3x" style="color:white"
+						href="https://www.linkedin.com/in/pierre-louis-bouchez/"></a>
 					<p class="qualite">pierre-louis-bouchez</p>
 
 				</div>
-				
+
 				<div class="col-md-2 col-sm-2">
-					<a class="fab fa-instagram fa-3x" style="color:white" href="https://www.instagram.com/paouis__/"></a>
+					<a class="fab fa-instagram fa-3x" style="color:white"
+						href="https://www.instagram.com/paouis__/"></a>
 					<p class="qualite">@paouis_</p>
 				</div>
 
@@ -427,11 +441,12 @@
 				</div>
 
 				<div class="col-md-3 col-sm-2">
-					<i class="fas fa-home fa-3x"></i>     
+					<i class="fas fa-home fa-3x"></i>
 					<p class="qualite">Saint-Omer</p>
 				</div>
 
-				
-		</div>
+
+			</div>
 </body>
+
 </html>
